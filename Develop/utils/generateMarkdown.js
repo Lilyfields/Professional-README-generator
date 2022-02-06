@@ -1,23 +1,24 @@
 class MarkDown {
   
   static renderLicenseBadge(license) {
-    const badges = {
-      mit: '[![Liscense: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-      isc: '[![Liscense:ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-      gnugplv3: '[![License:LGPL v3](https//img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)',
-      
+    const badge = {
+      MIT: '[![Liscense: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+      ISC:'[![Liscense:ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+      GnuPG: '[![License:LGPL v3](https//img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)'
+          
     }
-    return badges[license]
+    return badge[license]
+
   }
 
-  static rendorLicenseLink(license){
-    const licenseLinks = {
-      mit:'[MIT](https://choosealicense.com/licenses/mit/)',
-      isc: '[ISC](https://choosealicense.com/licenses/isc/)',
-      gnugplv3: '[GNUGPLv3](https://choosealicense.com/licenses/gpl-3.0/)',
+  static renderLicenseLink(license){
+    const licenseLink = {
+      MIT:'[MIT](https://choosealicense.com/licenses/mit/)',
+      ISC: '[ISC](https://choosealicense.com/licenses/isc/)',
+      GnuPG: '[GNUGPLv3](https://choosealicense.com/licenses/gpl-3.0/)',
     }
 
-    return licenseLinks[link]
+    return licenseLink[license]
   }
 
   static renderLicenseSection(license){
@@ -75,11 +76,11 @@ class MarkDown {
   ${response. githubUsername}
 
   ## License
-  ${this.responseLicenseSection(response.license)}
+  ${this.renderLicenseSection(response.license)}
 
   `
   }
 
 }
   
-module.exports= MarkDown  
+module.exports= MarkDown

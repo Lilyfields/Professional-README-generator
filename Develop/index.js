@@ -60,23 +60,39 @@ const MarkDown = require('./utils/generateMarkdown');
         name:'emailAddress',
         type: 'input',
         message: "What is your email address?",
+        validate: function (value){
+            let pass =value.match (
+               /^[a-zA-Z0-9.!#$&'*+/=?^_{!}~`]+@[[a-zA-Z0-9-]+[.com]+)*$/);
+            if (pass) {
+                return true;
+            }else{
+                return "Please enter a valid email address";
+            }
+        }
     },
 
     {
         name:'githubUsername',
         type: 'input',
         message:"What is your Github username?",
+        validate: function (value){
+            let pass =value.match (
+               /^[a-zA-Z0-9.!#$&'*+/=?^_{!}~`]+@[[a-zA-Z0-9-]+[.com]+)*$/);
+            if (pass) {
+                return true;
+            }else{
+                return "Please enter a valid github username";
+            }
+        }
     },
 
     {
         name:'license',
-        type: 'input',
+        type: 'checkbox',
         message: 'License?',
-        choices: ['MIT','ISC','GNUPLv3'],
-        filter(val) {
-            return val.toLowerCase();
-        }
-    }
+        choices: ['MIT','ISC','GnuPG'],
+        
+    },
 
   ]
 
