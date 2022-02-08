@@ -61,6 +61,7 @@ const index = require('../index');
   ### * [Email address](#emailAddress)
   ### * [Github username](#githubUsername)
   ### * [License](#license)
+  
 
   ## Author
   ${response.author}

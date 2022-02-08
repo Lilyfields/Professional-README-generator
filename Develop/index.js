@@ -18,7 +18,9 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
     },
 
+
     {
+    
         name:'author',
         type: 'input',
         message: "What is the author's name?",
@@ -127,6 +129,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
             let pass =value.match (
                 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
             if (pass) {
+                
                 return true;
             }else{
                 return "Please enter a valid github username";
@@ -150,9 +153,9 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
     },
 
-  ]
-
-  const writeToFile = fileContent => {
+]
+  
+    const writeToFile = fileContent => {
       return new Promise((resolve, reject) => {
           fs.writeFile('./generatedREADME.md', fileContent, err => {
             if (err) {
