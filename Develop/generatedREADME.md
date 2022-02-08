@@ -47,4 +47,4 @@
   License: MIT
   https://opensource.org/licenses/MIT
 
-  
+  Please find enclosed also a link to the walkthrough recording for the functionality of the README.md generator: https://watch.screencastify.com/v/2H1d7G4i1J3eN6Iv2Bc5
